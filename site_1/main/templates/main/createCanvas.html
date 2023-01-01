@@ -1,0 +1,28 @@
+{% extends "main/base.html" %}
+
+{% load static %}
+{% block styles %}{% endblock %}
+
+{% block title %}Create{% endblock %}
+{% block headtag %}Create{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+    
+<h1>this is create</h1>
+
+
+<form method="post" action="/createCanvas/" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <button type="submit", name="save" class="btn btn-success">Create New</button>
+        </div>
+    </div>
+
+</form>
+
+
+{% endblock %}

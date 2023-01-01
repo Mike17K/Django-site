@@ -1,0 +1,66 @@
+
+body{
+    margin: 0;
+    background-color: rgb(239, 239, 245);
+    color:rgb(236, 176, 106);
+}
+
+
+.sidenav{
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(122, 181, 240);
+    overflow-x: hidden;
+    padding-top: 20px;
+
+    
+}
+
+.sidenav a{
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    color: rgb(50,50,50);
+    font-size: 25px;
+    display: block;
+}
+
+.sidenav a:hover{
+    color:#d34e4e;
+}
+
+.sidenav-dropdown-button{
+    display: block;
+    margin: 10px;
+    width: 60px;
+    border-radius: 5px;
+}
+
+#menu-button{
+    position: fixed;
+    top: 200px;
+    left: 200px;
+}
+
+.main{
+    background-color: rgb(239, 239, 245);
+    color:rgb(236, 176, 106);
+
+    margin-left: 160px;
+    padding:0px 10px;
+}
+
+@media(max-width:992px){
+    .main{
+        margin-left: 0px;
+    }
+}
+
+@media(max-width:992px){
+    #sidenav{
+        display: none;
+    }
+}

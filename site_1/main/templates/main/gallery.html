@@ -1,0 +1,59 @@
+{% extends "main/base.html" %}
+
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'main/gallery.css' %}" >
+{% endblock %}
+
+{% block title %}Gallery{% endblock %}
+{% block headtag %}Gallery{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-image">
+                <thead>
+                    <tr>
+                        <th scope="col">Day</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Article Name</th>
+                        <th scope="col">Author</th>
+                        <th scope="col">Words</th>
+                        <th scope="col">Shares</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    {% for item in c %}
+                    {% csrf_token %}
+                    
+                        <tr>
+                            <th scope="row">{{ forloop.counter }}</th>
+                            <td class="w-25">
+                                <img src="{{item.image.url}}" class="img-fluid img-thumbnail" alt="{{item.txt}}">                             
+                            </td>
+                            <td>{{item.txt}}</td>
+                            <td>Cristina</td>
+                            <td>913</td>
+                            <td>2.846</td>
+                        </tr>
+                    
+                    {% endfor %}
+            </tbody>
+          </table>   
+      </div>
+    </div>
+  </div>
+  
+
+
+<!-- <p>{{item.txt}}</p> 
+<hr class="mt-0 mb-4"></hr> -->
+
+
+
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "main/base.html" %}
+
+{% block styles %}{% endblock %}
+
+{% block title %}Home{% endblock %}
+{% block headtag %}Home{% endblock %}
+
+{% block content %}
+    
+<h1>i present the tables of this user</h1>
+
+    {% for td in user.table.all %}
+        <p>{{td.name}}</p>
+    {% endfor %}
+
+
+
+{% endblock %}
